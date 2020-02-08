@@ -1,0 +1,107 @@
+.politics {
+  transition: max-height 0.8s;
+  max-height: 0px;
+  overflow: hidden;
+  label {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .input_container {
+    position: relative;
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    .politic_title {
+      transition: all 0.5s;
+      width: 0px;
+      color: white;
+      display: block;
+      margin: auto;
+      font-size: 1.5rem;
+      outline: none;
+      border: 0px;
+      background-color: transparent;
+      text-align: center;
+      border-bottom: 1px solid white;
+    }
+    .random {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      line-height: 31px;
+      color: white;
+    }
+  }
+  .btn_container {
+    height: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    .fish_mouth {
+      display: block;
+      cursor: pointer;
+      width: 100px;
+    }
+    .fish_mouth.close {
+      height: 50px;
+      opacity: 0.5;
+    }
+    .fish_mouth.open {
+      height: 100px;
+      opacity: 1;
+    }
+  }
+  .fish_saying {
+    transition: all 1s;
+    height: 0px;
+    overflow: hidden;
+    max-width: 700px;
+    margin: auto;
+    background-color: #f6f6f6;
+    color: black;
+    box-shadow: 0 10px 30px 0 rgba(0,0,0,0.05);
+    margin-bottom: 3rem;
+    p{
+        margin-bottom: 1rem;
+        line-height: 1.5rem;
+        .haha{
+            color: red;
+        }
+        .role{
+            font-weight: bolder;
+        }
+        .veg{
+            color: green;
+        }
+        .tfish{
+            color: orange;
+        }
+        .fish{
+            color: blue;
+        }
+    }
+  }
+  .fish_saying.open {
+    height: auto;
+    padding: 10px 20px;
+  }
+}
+
+.politics.show {
+  max-height: 100%;
+  .politic_title {
+    width: 300px;
+  }
+}
+
+@media(max-width:425px){
+  .fish_saying {
+    margin-right: 1rem !important;
+    margin-left: 1rem !important;
+  }
+}

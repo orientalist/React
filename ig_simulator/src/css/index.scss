@@ -1,0 +1,119 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
+
+@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
+
+#root {
+  min-height: 100vh;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Nunito", "微軟正黑體", sans-serif;
+}
+
+.container {
+  width: 375px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px black;
+  position: relative;
+  .searchPanel {
+    position: relative;
+    .fa-search {
+      position: absolute;
+      left: 5px;
+      top: 0;
+      font-size: 30px;
+      line-height: 40px;
+    }
+    input {
+      outline: none;
+      border: 0px;
+      padding: 0px;
+      padding-left: 45px;
+      width: calc(100% - 45px);
+      line-height: 40px;
+      font-size: 20px;
+      font-family: "Nunito", "微軟正黑體", sans-serif;
+    }
+  }
+  .quickButtons {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 0.5rem 0rem 0.5rem 5px;
+    border-bottom: 1px solid gray;
+    overflow-x: scroll;
+    min-height: fit-content;
+    -ms-scroll-style: none;
+    .quickButton {
+      i {
+        margin-right: 5px;
+      }
+      margin-right: 5px;
+      min-width: fit-content;
+      padding: 0.2rem 0.6rem;
+      font-size: 1rem;
+      font-weight: bolder;
+      border-radius: 5px;
+      background-color: white;
+      font-family: "Nunito", "微軟正黑體", sans-serif;
+    }
+  }
+  .quickButtons::-webkit-scrollbar {
+    display: none;
+  }
+
+  .photos {
+    background-color: white;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    .photo {
+      width: 33%;
+      height: 100px;
+      margin-bottom: 1px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .photos::-webkit-scrollbar {
+    display: none;
+  }
+
+  .footer {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    i {
+      font-size: 30px;
+      line-height: 50px;
+    }
+  }
+  .pressingPhoto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .pressingPhoto.hide{
+      display: none;
+  }
+}
+.container.pressing{
+    filter: blur(8px);
+}

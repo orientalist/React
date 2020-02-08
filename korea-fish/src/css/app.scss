@@ -1,0 +1,48 @@
+@charset 'utf-8';
+
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
+
+@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  box-sizing: border-box;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  background: linear-gradient(-45deg, #172d8b, #e29a14, #3b9438, #26a596);
+  background-size: 200% 200%;
+  animation: gradientBG 5s ease 0s infinite alternate;
+  color: white;
+  font-family: "Nunito", sans-serif;
+}
+
+.content {
+  padding: 2rem 2rem 0 2rem;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
